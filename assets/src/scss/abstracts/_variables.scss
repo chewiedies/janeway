@@ -1,0 +1,165 @@
+/* BS Variables */
+// Units of measurement
+$oneu: 3.120vw;
+$twou: $oneu * 2;
+
+$fontawesome: 'Font Awesome 5 Pro', fontawesome;
+
+
+// Box & Text Shadows
+$boxshadow: 0 .25rem .75rem rgba(0,0,0,.5);
+$boxshadow--lite: 0 .625rem .75rem -.625rem rgba(0,0,0,.5);
+$boxshadow--large: 0 1.5rem 1.25rem -1rem rgba(0,0,0,.5);
+
+$textshadow: 0 0 .75rem rgba(0,0,0,.5);
+
+// Social Media Colors
+$facebook: #3b5998;
+$twitter: #00aced;
+$googleplus: #dd4b39;
+$linkedin: #007bb6;
+$pinterest: #cb2027;
+
+// Misc Variables
+$ls: .0625rem;
+$vspace: 7.8125rem;
+$vspace1200: 4.6875rem;
+
+// Font size variables
+$cta: 3rem !important;
+$cta1024: 1.5rem !important;
+$maintitle: 4.75rem;
+$maintitle1024: 2rem;
+
+$h1: 4.75rem;
+$h2: 4rem;
+$h3: 3rem;
+$h4: 2rem;
+$h5: 1.5rem;
+$h6: 1.25rem;
+$bodycopy: 1.25rem;
+
+$h1_1024: 4rem;
+$h2_1024: 3.125rem;
+$h3_1024: 2rem;
+$h4_1024: 1.5rem;
+$h5_1024: 1.25rem;
+$h6_1024: 1.125rem;
+$bodycopy_1024: 1.125rem;
+
+// Breakpoint
+$break1800: "only screen and (max-width: 112.5em)";
+$break1700: "only screen and (max-width: 106.25em)";
+$break1600: "only screen and (max-width: 100em)";
+$break1400: "only screen and (max-width: 87.5em)";
+$break1300: "only screen and (max-width: 81.25em)";
+$break1200: "only screen and (max-width: 75em)";
+$break1100: "only screen and (max-width: 68.75em)";
+$break1024: "only screen and (max-width: 64em)";
+$minbreak1025: "only screen and (min-width: 64.0625em)";
+$break972: "only screen and (max-width: 60.75em)";
+$break951: "only screen and (max-width: 59.4375em)";
+$break900: "only screen and (max-width: 56.25em)";
+$break800: "only screen and (max-width: 50em)";
+$break768: "only screen and (max-width: 48em)";
+$break767: "only screen and (max-width: 47.9375em)";
+$break640: "only screen and (max-width: 40em)";
+$break639: "only screen and (max-width: 39.9375em)";
+$break600: "only screen and (max-width: 37.5em)";
+$break500: "only screen and (max-width: 31.25em)";
+$break480: "only screen and (max-width: 30em)";
+$break400: "only screen and (max-width: 25em)";
+$break375: "only screen and (max-width: 23.4375em)";
+
+// Fluid Type Mixin
+// ex: @include fluid-type(1rem,1.5rem,30rem,64rem);
+@mixin fluid-type($min-font-size: 1rem, $max-font-size: 1.125rem, $lower-range: 30rem, $upper-range: 100rem) {
+
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))})) !important;
+  
+    @media screen and (max-width: $lower-range) {
+      font-size: $min-font-size !important;
+    }
+    @media screen and (min-width: $upper-range){
+      font-size: $max-font-size !important;
+    }
+  }
+
+/**
+ * Colors
+ *
+ */
+
+// Colors
+$mint: #6CD0C0;
+$red: #ae250e;
+$orange: #b65b24;
+$blue: #1662B9;
+$darkblue: #221A4C;
+$bluealpha: rgba(22,98,185,0.4);
+$ltblue: #1e73be;
+$white: #FFFFFF;
+$black: #000000;
+$blackalpha: rgba(0,0,0,.25);
+$almostblack: #29303A;
+$green: #093C1E;
+$ltgreen: #649D84;
+$darkgreen: #0C2F26;
+$gray: #3D444D;
+$medgray: #535961;
+$ltgray: #DED4BD;
+$darkgray: #29303A;
+$gold: #b99c00;
+$ltyellow: #F0E6CD;
+
+/**
+ * Bootstrap customised
+ *
+ * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+ */
+$font-size-root:75%; // 1rem = 16px
+$font-size-base:1.4rem;
+$font-weight-base:400;
+$font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+$border-radius:.4rem;
+$primary:blue;
+$btn-box-shadow:none;
+$btn-active-box-shadow:none;
+$btn-focus-box-shadow:none;
+$input-btn-focus-box-shadow:none;
+$input-border-radius:0;
+$grid-columns:12;
+$grid-gutter-width:3rem;
+$body-color:black;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+
+$spacers : (
+    0: 0,
+    1: 1rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem,
+    5: 5rem,
+    6: 6rem,
+    7: 7rem,
+    8: 8rem,
+    9: 9rem,
+    10: 10rem
+);
